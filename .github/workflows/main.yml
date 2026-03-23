@@ -8,5 +8,9 @@ jobs:
       steps:
         - name: Message
           run: echo "Message"
-        - name: Alert
-          uses: megharajmathur0224/action-send-mail@v3
+  alert:
+      runs-on: ubuntu-latest
+      if: always()
+      steps:
+        - name: Send mail
+          run: mail -s "CI/CD Status" megharajmathur0224@gmail.com
