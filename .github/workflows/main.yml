@@ -1,0 +1,10 @@
+name: Print message
+on:
+   push: 
+     branches: master
+jobs:
+  build:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Message
+          run: echo "Message"
